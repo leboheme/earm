@@ -4,6 +4,8 @@ import com.aramirezochoa.earm.input.HandleInput;
 import com.aramirezochoa.earm.media.MediaManager;
 import com.aramirezochoa.earm.state.level.Level;
 import com.aramirezochoa.earm.state.level.avatar.command.AvatarCommand;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
@@ -53,6 +55,11 @@ public class CommandButton extends TextButton {
         } else if (left == 1 && counter > 0.5) {
             showWarn = !showWarn;
             counter = 0;
+        }
+
+        if (avatarCommand.getKeyboardCode() != Input.Keys.UNKNOWN &&
+                Gdx.input.isKeyJustPressed(avatarCommand.getKeyboardCode())) {
+            HandleInput.INSTANCE.notifyAvatarCommand(avatarCommand);
         }
     }
 

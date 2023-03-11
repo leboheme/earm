@@ -11,8 +11,10 @@ import com.aramirezochoa.earm.state.level.manager.LevelManager;
 import com.aramirezochoa.earm.state.level.manager.WorldType;
 import com.aramirezochoa.earm.state.menu.MenuAction;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.CheckBox;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.Align;
@@ -35,10 +37,20 @@ public class ButtonFactory {
         return button;
     }
 
-    public static CommandButton createCommandButton(AtomicInteger text, Level level, final AvatarCommand avatarCommand) {
+    public static Group createCommandButton(AtomicInteger text, Level level, final AvatarCommand avatarCommand) {
         TextButton.TextButtonStyle buttonStyle = MediaManager.INSTANCE.getTextButtonStyle(ButtonSize.MID, ButtonContext.LEVEL, avatarCommand.name(), ButtonSize.LIT);
         CommandButton button = new CommandButton(String.valueOf(text), buttonStyle, avatarCommand, level);
-        return button;
+
+        Group grp = new Group();
+        grp.setWidth(button.getWidth());
+        Label label = new Label(avatarCommand.getKeyLabel(), new Label.LabelStyle(buttonStyle.font, buttonStyle.fontColor));
+        label.setAlignment(Align.bottom);
+        label.setAlignment(Align.center);
+        label.setWidth(button.getWidth());
+        grp.addActor(button);
+        grp.addActor(label);
+
+        return grp;
     }
 
     public static CheckBox createCheckBox(ButtonSize buttonSize, ButtonContext buttonContext, final OptionAction optionAction) {
