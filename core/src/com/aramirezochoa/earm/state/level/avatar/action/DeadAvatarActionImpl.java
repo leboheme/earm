@@ -22,7 +22,7 @@ public class DeadAvatarActionImpl implements AvatarActionDef {
         avatar.getVelocity().y = 0;
         avatar.getAcceleration().y = -level.getGravity().y;
         if (avatar.actionTimer < 0) {
-            Level.class.cast(level).setLose(true);
+            level.setLose(true);
         } else {
             avatar.actionTimer -= deltaTime;
         }

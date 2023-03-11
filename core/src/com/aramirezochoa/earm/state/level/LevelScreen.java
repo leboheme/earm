@@ -104,8 +104,8 @@ public class LevelScreen extends AbstractScreen {
         // Initialize InputProcessor
         InputMultiplexer im = new InputMultiplexer();
         im.addProcessor(new InputAdapter());
-        im.addProcessor(InputProcessor.class.cast(guiStage));
-        im.addProcessor(InputProcessor.class.cast(gameStage));
+        im.addProcessor(guiStage);
+        im.addProcessor(gameStage);
         Gdx.input.setInputProcessor(im);
 
         // Add characters to stage

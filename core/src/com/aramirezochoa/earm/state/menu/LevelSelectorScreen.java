@@ -42,7 +42,7 @@ public class LevelSelectorScreen extends AbstractScreen {
         stage = new Stage(new StretchViewport(Constant.SCREEN_WIDTH, Constant.SCREEN_HEIGHT));
         InputMultiplexer im = new InputMultiplexer();
         im.addProcessor(new InputAdapter());
-        im.addProcessor(InputProcessor.class.cast(stage));
+        im.addProcessor(stage);
         Gdx.input.setInputProcessor(im);
 
         createWorldsButtons();
