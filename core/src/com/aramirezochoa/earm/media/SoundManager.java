@@ -24,13 +24,17 @@ public enum SoundManager implements Manager {
 
     private Sound buttonSound;
     private static float VOLUME = 0.1f;
-
     private boolean loaded = false;
+    private boolean interactionStarted = false;
 
     public void playButton() {
-        if (OptionsManager.INSTANCE.isEnabled(OptionAction.SOUND)) {
+        if (isEnabled(OptionAction.SOUND)) {
             buttonSound.play(VOLUME);
         }
+    }
+
+    public void interactionStarted() {
+        interactionStarted = true;
     }
 
     private enum SoundStatus {
@@ -43,7 +47,6 @@ public enum SoundManager implements Manager {
         if (loaded) {
             stopThemes();
         }
-        loaded = false;
         sounds = MediaManager.INSTANCE.getSounds();
         themes = MediaManager.INSTANCE.getThemes();
         buttonSound = MediaManager.INSTANCE.getButtonSound();
@@ -58,7 +61,7 @@ public enum SoundManager implements Manager {
     }
 
     public void playSound(AvatarType type, AvatarAction avatarAction) {
-        if (OptionsManager.INSTANCE.isEnabled(OptionAction.SOUND)) {
+        if (isEnabled(OptionAction.SOUND)) {
             Map<AvatarAction, Sound> avatarSounds = sounds.get(type);
             if (avatarSounds.containsKey(avatarAction)) {
                 avatarSounds.get(avatarAction).play(VOLUME);
@@ -86,7 +89,7 @@ public enum SoundManager implements Manager {
     }
 
     public void playTheme(WorldType world) {
-        if (OptionsManager.INSTANCE.isEnabled(OptionAction.MUSIC)) {
+        if (isEnabled(OptionAction.MUSIC)) {
             if (!themesStatus.containsKey(world)) {
                 themesStatus.put(world, SoundStatus.STOP);
             }
@@ -101,4 +104,7 @@ public enum SoundManager implements Manager {
         }
     }
 
+    private boolean isEnabled(OptionAction optionAction) {
+        return interactionStarted && OptionsManager.INSTANCE.isEnabled(optionAction);
+    }
 }

@@ -85,9 +85,11 @@ public class MainMenuScreen extends AbstractScreen {
         switch (HandleInput.INSTANCE.getMenuAction()) {
             case PLAY:
                 ScreenManager.INSTANCE.setScreen(ScreenManager.ScreenType.LEVEL_SELECTOR);
+                SoundManager.INSTANCE.interactionStarted();
                 break;
             case OPTIONS:
                 ScreenManager.INSTANCE.setScreen(ScreenManager.ScreenType.OPTIONS_MENU);
+                SoundManager.INSTANCE.interactionStarted();
                 break;
             case EXIT:
                 ScreenManager.INSTANCE.setScreen(ScreenManager.ScreenType.EXIT);
