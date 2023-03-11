@@ -23,12 +23,13 @@ public enum SoundManager implements Manager {
     private Map<WorldType, SoundStatus> themesStatus = new HashMap<WorldType, SoundStatus>(); // True: sounding
 
     private Sound buttonSound;
+    private static float VOLUME = 0.1f;
 
     private boolean loaded = false;
 
     public void playButton() {
         if (OptionsManager.INSTANCE.isEnabled(OptionAction.SOUND)) {
-            buttonSound.play();
+            buttonSound.play(VOLUME);
         }
     }
 
@@ -60,7 +61,7 @@ public enum SoundManager implements Manager {
         if (OptionsManager.INSTANCE.isEnabled(OptionAction.SOUND)) {
             Map<AvatarAction, Sound> avatarSounds = sounds.get(type);
             if (avatarSounds.containsKey(avatarAction)) {
-                avatarSounds.get(avatarAction).play();
+                avatarSounds.get(avatarAction).play(VOLUME);
             }
         }
     }

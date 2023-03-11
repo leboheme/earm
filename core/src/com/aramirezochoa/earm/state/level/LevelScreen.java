@@ -298,7 +298,11 @@ public class LevelScreen extends AbstractScreen {
                 case SOLDIER:
                 case SOLFLYER:
                     EnemyAvatar enemyAvatar = enemyPool.obtain();
-                    enemyAvatar.init(avatarType, new Point2(((TiledMapTileMapObject) mapObject).getX(), ((TiledMapTileMapObject) mapObject).getY()), level, lookingAt);
+                    if (mapObject instanceof RectangleMapObject) {
+                        enemyAvatar.init(avatarType, new Point2(((RectangleMapObject) mapObject).getRectangle().x, ((RectangleMapObject) mapObject).getRectangle().y), level, lookingAt);
+                    } else {
+                        enemyAvatar.init(avatarType, new Point2(((TiledMapTileMapObject) mapObject).getX(), ((TiledMapTileMapObject) mapObject).getY()), level, lookingAt);
+                    }
                     level.getEnemyAvatars().add(enemyAvatar);
                     break;
                 case GOAL:
@@ -308,7 +312,11 @@ public class LevelScreen extends AbstractScreen {
                     //
                     float info = getSpeed((String) mapObject.getProperties().get("type"), 1);
                     InteractiveAvatar interactiveAvatar = interactivePool.obtain();
-                    interactiveAvatar.init(avatarType, new Point2(((TiledMapTileMapObject) mapObject).getX(), ((TiledMapTileMapObject) mapObject).getY()), level, lookingAt, info);
+                    if (mapObject instanceof RectangleMapObject) {
+                        interactiveAvatar.init(avatarType, new Point2(((RectangleMapObject) mapObject).getRectangle().x, ((RectangleMapObject) mapObject).getRectangle().y), level, lookingAt, info);
+                    } else {
+                        interactiveAvatar.init(avatarType, new Point2(((TiledMapTileMapObject) mapObject).getX(), ((TiledMapTileMapObject) mapObject).getY()), level, lookingAt, info);
+                    }
                     level.getInteractiveAvatars().add(interactiveAvatar);
                     break;
                 default:

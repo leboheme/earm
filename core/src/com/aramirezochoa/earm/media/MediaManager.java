@@ -30,6 +30,7 @@ import java.util.Map;
 public enum MediaManager implements Manager {
     INSTANCE();
 
+    private static final float VOLUME = 0.1f;
     private static final String TILES_ATLAS_PATH = "data/images/tiles.atlas";
     private static final String LEVEL_ATLAS_PATH = "data/images/level.atlas";
     public static final String MENU_ATLAS_PATH = "data/images/menu.atlas";
@@ -78,6 +79,8 @@ public enum MediaManager implements Manager {
         loadEarm();
         loadOthers();
         loadOtherSounds();
+
+        for(Music music: themes.values()) music.setVolume(VOLUME);
 
         loaded = true;
     }
