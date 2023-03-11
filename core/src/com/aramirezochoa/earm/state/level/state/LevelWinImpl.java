@@ -124,6 +124,10 @@ public class LevelWinImpl extends LevelStateDef {
                         enable();
                         disableRetry();
                         return LevelScreenState.PAUSE;
+                    } else if (isEnterJustPressed()) {
+                        disableRetry();
+                        ScreenManager.INSTANCE.setScreen(level.getNumber(), level.isTutorial());
+                        return LevelScreenState.INGAME;
                     }
                 } else {
                     if (isBackJustPressed()) {
@@ -131,6 +135,13 @@ public class LevelWinImpl extends LevelStateDef {
                         ScreenManager.INSTANCE.setScreen(ScreenManager.ScreenType.LEVEL_SELECTOR);
                         SoundManager.INSTANCE.stopTheme(level.getWorld());
                         return LevelScreenState.EMPTY;
+                    } else if (isEnterJustPressed()) {
+                        if (level.isTutorial()) {
+                            ScreenManager.INSTANCE.setScreen(level.getNumber(), false);
+                        } else {
+                            ScreenManager.INSTANCE.setScreen(level.getNumber() + 1, true);
+                        }
+                        return LevelScreenState.INGAME;
                     }
                 }
         }

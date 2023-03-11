@@ -282,7 +282,7 @@
   </data>
  </layer>
  <objectgroup name="avatars" width="62" height="45">
-  <object name="earm" gid="25" x="1804" y="653"/>
+  <object name="earm" gid="25" x="1600" y="653"/>
   <object name="soldier" gid="35" x="455" y="689"/>
   <object name="flairy" gid="37" x="887" y="1226"/>
   <object name="flairy" gid="37" x="33" y="1008"/>

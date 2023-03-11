@@ -89,4 +89,8 @@ public abstract class LevelStateDef {
     protected boolean isBackJustPressed() {
         return Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE) || Gdx.input.isKeyJustPressed(Input.Keys.BACK);
     }
+
+    protected boolean isEnterJustPressed() {
+        return Gdx.input.isKeyJustPressed(Input.Keys.ENTER);
+    }
 }

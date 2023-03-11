@@ -71,6 +71,11 @@ public class LevelPauseImpl extends LevelStateDef {
                         enable();
                         disableRetry();
                         return LevelScreenState.PAUSE;
+                    } else if(isEnterJustPressed()) {
+                        disableRetry();
+                        disableRetry();
+                        ScreenManager.INSTANCE.setScreen(level.getNumber(), level.isTutorial());
+                        return LevelScreenState.INGAME;
                     }
                 } else {
                     if (isBackJustPressed()) {
@@ -78,6 +83,8 @@ public class LevelPauseImpl extends LevelStateDef {
                         ScreenManager.INSTANCE.setScreen(ScreenManager.ScreenType.LEVEL_SELECTOR);
                         SoundManager.INSTANCE.stopTheme(level.getWorld());
                         return LevelScreenState.EMPTY;
+                    } else if(isEnterJustPressed()) {
+                        return LevelScreenState.INGAME;
                     }
                 }
         }
