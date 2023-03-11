@@ -15,8 +15,8 @@ public enum OptionsManager implements Manager {
     private static final String MUSIC = "music";
     public static final String OPTIONS = "Options";
 
-    private Boolean sound = true;
-    private Boolean music = true;
+    private Boolean sound = false;
+    private Boolean music = false;
 
     public void init() {
         loadOptions();
@@ -27,13 +27,13 @@ public enum OptionsManager implements Manager {
         if (!prefs.contains(SOUND)) {
             createDefaultOptions(prefs);
         }
-        this.sound = prefs.getBoolean(SOUND);
-        this.music = prefs.getBoolean(MUSIC);
+        this.sound = false;
+        this.music = false;
     }
 
     private void createDefaultOptions(Preferences prefs) {
-        prefs.putBoolean(SOUND, true);
-        prefs.putBoolean(MUSIC, true);
+        prefs.putBoolean(SOUND, false);
+        prefs.putBoolean(MUSIC, false);
         prefs.flush();
     }
 
@@ -54,12 +54,6 @@ public enum OptionsManager implements Manager {
     }
 
     public boolean isEnabled(OptionAction optionAction) {
-        switch (optionAction) {
-            case SOUND:
-                return sound;
-            case MUSIC:
-                return music;
-        }
         return false;
     }
 

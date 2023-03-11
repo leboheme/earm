@@ -11,9 +11,9 @@ public class HtmlLauncher extends GwtApplication implements ActivityRequestHandl
     @Override
     public GwtApplicationConfiguration getConfig() {
         // Resizable application, uses available space in browser
-        return new GwtApplicationConfiguration(true);
+        return new GwtApplicationConfiguration(GwtApplication.isMobileDevice());
         // Fixed size application:
-        //return new GwtApplicationConfiguration(480, 320);
+//        return new GwtApplicationConfiguration(600, 400, GwtApplication.isMobileDevice());
     }
 
     @Override
