@@ -20,6 +20,7 @@ public class DesktopLauncher implements ActivityRequestHandler {
         config.setForegroundFPS(60);
         config.setTitle("Earm!");
         config.setWindowedMode(800, 480);
+        config.setResizable(false);
         new Lwjgl3Application(new EarmGame(application), config);
     }
 
