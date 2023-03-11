@@ -38,6 +38,9 @@ public enum LevelManager implements Manager {
             createDefaultLevelDescriptions(prefs);
         }
         loadLevelsDescription(prefs);
+        for (LevelDescription level : levels) {
+            level.setEnabled(true);
+        }
     }
 
     private void createDefaultLevelDescriptions(Preferences prefs) {
