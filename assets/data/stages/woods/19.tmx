@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="68" height="35" tilewidth="32" tileheight="32" backgroundcolor="#ffffff">
+ <properties>
+  <property name="FLY" value="1"/>
+  <property name="JUMP" value="14"/>
+ </properties>
+ <tileset firstgid="1" name="tiles" tilewidth="32" tileheight="32">
+  <image source="tiles.png" width="320" height="320"/>
+  <tile id="0">
+   <properties>
+    <property name="type" value="TOPL"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="type" value="TOPR"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="type" value="LEFT"/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="type" value="RIGHT"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="type" value="DGL1"/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="type" value="NB"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="type" value="NB"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="type" value="DGR1"/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="type" value="DGL1"/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="type" value="DGR1"/>
+   </properties>
+  </tile>
+  <tile id="35">
+   <properties>
+    <property name="type" value="DGR1"/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="type" value="NB"/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="type" value="NB"/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="type" value="NB"/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="type" value="DGL1"/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="type" value="NB"/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="type" value="NB"/>
+   </properties>
+  </tile>
+  <tile id="43">
+   <properties>
+    <property name="type" value="DGR1"/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="type" value="DGR1"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="type" value="DGR1"/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="type" value="DGL1"/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="type" value="DGR4"/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="type" value="DGR5"/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="type" value="LEFT"/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="type" value="DGL1"/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="type" value="DGR1"/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="type" value="RIGHT"/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="type" value="DGL1"/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="type" value="DGR1"/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="type" value="RIGHT"/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="type" value="LEFT"/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="type" value="DGL1"/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="type" value="LEFT"/>
+   </properties>
+  </tile>
+  <tile id="75">
+   <properties>
+    <property name="type" value="RIGHT"/>
+   </properties>
+  </tile>
+  <tile id="80">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="81">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="83">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="84">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="type" value="TOP"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="101" name="props" tilewidth="32" tileheight="32">
+  <image source="props.png" width="320" height="320"/>
+ </tileset>
+ <layer name="background" width="68" height="35">
+  <data encoding="base64" compression="zlib">
+   eJzt18tqwlAURuE8QQQfsg50oIMWqrUKWmsVL9WKd0tr6+UtXUMHgQySnZOEf8E3OYTtHro9Tyml8tsHBhi6XiQlzfGFhetFUtIeB3y7XiQlnXHB1fUiSimllFIqMOv7Jmv3k/V9k7X7yfq+sZjvoxDjvPus7xvdT0qpPFdGxfgtSz3iyfgtS7XQNn5TKqxn1NHAC5p4jTgz7H+pH3G+ZR108YYe3tF3upHbRhhjgik+MTP8vaLh7DhaYoU1NthiF/DdA0oJ7uWqH/ziiD/84xTwXRW1BPdSbroBwtI2FQ==
+  </data>
+ </layer>
+ <layer name="ground" width="68" height="35">
+  <data encoding="base64" compression="zlib">
+   eJztWNtOwzAMNXfGgA02abzCD/ARPHDZXtYB//8ps9VGO4qaNKFbElYf6ShzmrjRmRs7IVIoFAqFQtEXJ8zL3IsoCGPmNPciGjwxLyj8/1kzK+aG+e1pccwP89fjswQ9FlRr8cKcUN715NZDtHimWot7yqMHxtmSuUr8fgPU4o7y6VECUItbSqtHdWD/sXBpMcT48MXFofQoLR4MXFqk/l5KgC8u9q1HqfFgEKrFUOKjS4u+8VF6PCCumNcNR9COLPuGhhEfD8zHhjNoZ5Y9p2495Ox5yjyj8DMOzomd1za+ol0tu3H8dp2T1tZzezza9rM2f+/MD+Yn88sx3/Zjxi7/MC9n7a5QKBQKP8zdl+Quk/fOqb4XjLVDciXmV5wfa6MP7O8LvO/pOrfs41wzpva6N9ZGH9jfB6/MN9rlfSHWD6aVGhZrVbuV2jW0FsAaxX5XjI0+sD8FpIbFWtVu54nWkQvyDXXtFbhnHKse5kwQcgeCe8ax6iF7netO7L/pYfJYSsbm2hTYAquvNBQ=
+  </data>
+ </layer>
+ <layer name="frontground" width="68" height="35">
+  <data encoding="base64" compression="zlib">
+   eJzt2DEOgCAQBEA+q7b4/0ZaEwoaWQwzyfVbHeyVAsCIs82VDrGQ2uZOhwB+50gHAGBp3gnY02jfnrUj0rtI3waAOdz83/xBAL6T7pn0PXlsBwQ=
+  </data>
+ </layer>
+ <objectgroup name="avatars" width="68" height="35">
+  <object name="earm" gid="25" x="23" y="648"/>
+  <object name="flairy" gid="37" x="1856" y="300"/>
+  <object name="flairy" gid="37" x="338" y="936"/>
+  <object name="flairy" gid="37" x="910" y="240"/>
+  <object name="solflyer" gid="35" x="418" y="810"/>
+  <object name="solflyer" gid="35" x="2116" y="720"/>
+  <object name="soldier" gid="35" x="1378" y="652"/>
+  <object name="soldier" gid="35" x="1834" y="654"/>
+  <object name="goal" gid="26" x="1996" y="846"/>
+  <object name="soldier" gid="35" x="852" y="978"/>
+ </objectgroup>
+</map>

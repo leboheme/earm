@@ -1,0 +1,48 @@
+
+tiles.png
+size: 1932,322
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+DIG_JUNGLE_FX
+  rotate: false
+  xy: 2, 2
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 0
+DIG_JUNGLE_FX
+  rotate: false
+  xy: 324, 2
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 1
+DIG_JUNGLE_FX
+  rotate: false
+  xy: 646, 2
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 2
+DIG_SNOW_FX
+  rotate: false
+  xy: 968, 2
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 0
+DIG_SNOW_FX
+  rotate: false
+  xy: 1290, 2
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 1
+DIG_SNOW_FX
+  rotate: false
+  xy: 1612, 2
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 2
